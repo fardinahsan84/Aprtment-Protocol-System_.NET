@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApartmentProtocolServiceSystemFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="building_staff">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fathersname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nidnumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateofbirth" Type="datetime" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" Nullable="false" />
+    <Property Name="salary" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="manager_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Buildings_expenses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="slot" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ammount" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="managers_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="daily_inout_record">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="entry_time" Type="datetime" Nullable="false" />
+    <Property Name="exit_time" Type="datetime" />
+    <Property Name="duty_guard" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="flat_member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="relation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="relation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" />
+    <Property Name="entry_time" Type="datetime" Nullable="false" />
+    <Property Name="exit_time" Type="datetime" />
+    <Property Name="duty_guard" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="qsn" Type="varchar" MaxLength="50" />
+    <Property Name="ans" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="notice_board">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="tittle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="details" Type="text" Nullable="false" />
+    <Property Name="attachment" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="rent_holder">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fathersname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nidnumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateofbirth" Type="datetime" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isemailveryfied" Type="bit" Nullable="false" />
+    <Property Name="activationcode" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rentHolders_member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="relation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" />
+    <Property Name="rentHolder_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rentHolders_servant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nid_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" />
+    <Property Name="rentHolders_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nid_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="service_charge_payment_record">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="month" Type="datetime" Nullable="false" />
+    <Property Name="payment_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ammount" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="reciver_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fathersname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flat_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nidnumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateofbirth" Type="datetime" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isemailveryfied" Type="bit" Nullable="false" />
+    <Property Name="activationcode" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="photo" Type="varchar(max)" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_building_staff_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="building_staff" Type="Self.building_staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="building_staff">
+        <PropertyRef Name="manager_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_flat_member_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="flat_member" Type="Self.flat_member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="flat_member">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rent_holder_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="rent_holder" Type="Self.rent_holder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rent_holder">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentHolders_member_rent_holder">
+    <End Role="rent_holder" Type="Self.rent_holder" Multiplicity="1" />
+    <End Role="rentHolders_member" Type="Self.rentHolders_member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rent_holder">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rentHolders_member">
+        <PropertyRef Name="rentHolder_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rentHolders_servant_rent_holder">
+    <End Role="rent_holder" Type="Self.rent_holder" Multiplicity="1" />
+    <End Role="rentHolders_servant" Type="Self.rentHolders_servant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rent_holder">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rentHolders_servant">
+        <PropertyRef Name="rentHolders_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_servant_users">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="servant" Type="Self.servant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="servant">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApartmentProtocolServiceSystemFinalModelStoreContainer">
+    <EntitySet Name="building_staff" EntityType="Self.building_staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Buildings_expenses" EntityType="Self.Buildings_expenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="daily_inout_record" EntityType="Self.daily_inout_record" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="flat_member" EntityType="Self.flat_member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="guest" EntityType="Self.guest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="notice_board" EntityType="Self.notice_board" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rent_holder" EntityType="Self.rent_holder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rentHolders_member" EntityType="Self.rentHolders_member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rentHolders_servant" EntityType="Self.rentHolders_servant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servant" EntityType="Self.servant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="service_charge_payment_record" EntityType="Self.service_charge_payment_record" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_building_staff_users" Association="Self.FK_building_staff_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="building_staff" EntitySet="building_staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_flat_member_users" Association="Self.FK_flat_member_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="flat_member" EntitySet="flat_member" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rent_holder_users" Association="Self.FK_rent_holder_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="rent_holder" EntitySet="rent_holder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentHolders_member_rent_holder" Association="Self.FK_rentHolders_member_rent_holder">
+      <End Role="rent_holder" EntitySet="rent_holder" />
+      <End Role="rentHolders_member" EntitySet="rentHolders_member" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rentHolders_servant_rent_holder" Association="Self.FK_rentHolders_servant_rent_holder">
+      <End Role="rent_holder" EntitySet="rent_holder" />
+      <End Role="rentHolders_servant" EntitySet="rentHolders_servant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_servant_users" Association="Self.FK_servant_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="servant" EntitySet="servant" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a02f6d9cd2524831aa34beac3fa8b65d" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.building_staff" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.Buildings_expenses" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.daily_inout_record" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.flat_member" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.guest" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.login" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.notice_board" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.rent_holder" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.rentHolders_member" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.rentHolders_servant" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.servant" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.service_charge_payment_record" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApartmentProtocolServiceSystemFinalModel.user" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_building_staff_users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_flat_member_users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_rent_holder_users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_rentHolders_member_rent_holder" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_rentHolders_servant_rent_holder" ManuallyRouted="false" />
+        <AssociationConnector Association="ApartmentProtocolServiceSystemFinalModel.FK_servant_users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

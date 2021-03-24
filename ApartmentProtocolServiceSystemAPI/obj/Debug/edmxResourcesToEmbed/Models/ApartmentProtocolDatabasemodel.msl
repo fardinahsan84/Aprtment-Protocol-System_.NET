@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApartmentProtocolServiceSystemFinalModelStoreContainer" CdmEntityContainer="ApartmentProtocolServiceSystemFinalEntities">
+    <EntitySetMapping Name="building_staff">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.building_staff">
+        <MappingFragment StoreEntitySet="building_staff">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="fathersname" ColumnName="fathersname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="nidnumber" ColumnName="nidnumber" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="manager_id" ColumnName="manager_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buildings_expenses">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.Buildings_expenses">
+        <MappingFragment StoreEntitySet="Buildings_expenses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="ammount" ColumnName="ammount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="managers_name" ColumnName="managers_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="daily_inout_record">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.daily_inout_record">
+        <MappingFragment StoreEntitySet="daily_inout_record">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="entry_time" ColumnName="entry_time" />
+          <ScalarProperty Name="exit_time" ColumnName="exit_time" />
+          <ScalarProperty Name="duty_guard" ColumnName="duty_guard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="flat_member">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.flat_member">
+        <MappingFragment StoreEntitySet="flat_member">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guests">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.guest">
+        <MappingFragment StoreEntitySet="guest">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="entry_time" ColumnName="entry_time" />
+          <ScalarProperty Name="exit_time" ColumnName="exit_time" />
+          <ScalarProperty Name="duty_guard" ColumnName="duty_guard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="qsn" ColumnName="qsn" />
+          <ScalarProperty Name="ans" ColumnName="ans" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notice_board">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.notice_board">
+        <MappingFragment StoreEntitySet="notice_board">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="tittle" ColumnName="tittle" />
+          <ScalarProperty Name="details" ColumnName="details" />
+          <ScalarProperty Name="attachment" ColumnName="attachment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rent_holder">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.rent_holder">
+        <MappingFragment StoreEntitySet="rent_holder">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="fathersname" ColumnName="fathersname" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="nidnumber" ColumnName="nidnumber" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="isemailveryfied" ColumnName="isemailveryfied" />
+          <ScalarProperty Name="activationcode" ColumnName="activationcode" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rentHolders_member">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.rentHolders_member">
+        <MappingFragment StoreEntitySet="rentHolders_member">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="relation" ColumnName="relation" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="rentHolder_id" ColumnName="rentHolder_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rentHolders_servant">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.rentHolders_servant">
+        <MappingFragment StoreEntitySet="rentHolders_servant">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="nid_number" ColumnName="nid_number" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="rentHolders_id" ColumnName="rentHolders_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servants">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.servant">
+        <MappingFragment StoreEntitySet="servant">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="nid_number" ColumnName="nid_number" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_charge_payment_record">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.service_charge_payment_record">
+        <MappingFragment StoreEntitySet="service_charge_payment_record">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="ammount" ColumnName="ammount" />
+          <ScalarProperty Name="reciver_name" ColumnName="reciver_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="ApartmentProtocolServiceSystemFinalModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="fathersname" ColumnName="fathersname" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="nidnumber" ColumnName="nidnumber" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="isemailveryfied" ColumnName="isemailveryfied" />
+          <ScalarProperty Name="activationcode" ColumnName="activationcode" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
